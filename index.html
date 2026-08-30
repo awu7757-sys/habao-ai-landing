@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>哈寶足球AI｜智能賽事分析</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      background: #041b1c;
+      color: white;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      background:
+        radial-gradient(circle at 75% 40%, rgba(28, 235, 167, 0.16), transparent 30%),
+        linear-gradient(135deg, #031314, #062627);
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .logo-title {
+      color: #35efb3;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 1.12;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: #35efb3;
+    }
+
+    .description {
+      color: #91adb0;
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 17px 32px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .primary {
+      background: #35efb3;
+      color: #032019;
+    }
+
+    .secondary {
+      border: 1px solid #4d696b;
+      color: white;
+    }
+
+    .preview {
+      min-height: 500px;
+      border-radius: 30px;
+      border: 1px solid rgba(53,239,179,.3);
+      background: rgba(5, 35, 37, .7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #35efb3;
+      padding: 40px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 50px 20px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      .preview {
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div>
+
+        <div class="logo-title">
+          ⚽ 哈寶足球 AI
+        </div>
+
+        <h1>
+          每天賽事<br>
+          不用自己<span>查半天</span>
+        </h1>
+
+        <p class="description">
+          AI 整合賽事數據<br>
+          快速分析獨贏・大小分・BTTS・比分
+        </p>
+
+        <div class="buttons">
+
+          <a href="#" class="button primary">
+            立即使用 →
+          </a>
+
+          <a href="#" class="button secondary">
+            免費領取帳號
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="preview">
+        這裡等等放<br>
+        哈寶足球 AI 實際介面
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
