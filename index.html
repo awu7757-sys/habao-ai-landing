@@ -7,165 +7,593 @@
   <title>哈寶足球AI｜智能賽事分析</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
 
-    body {
-      font-family: Arial, "Noto Sans TC", sans-serif;
-      background: #041b1c;
-      color: white;
+    html{
+      scroll-behavior:smooth;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 24px;
+    body{
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans TC",
+        Arial,
+        sans-serif;
+
+      background:#031718;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+
+    /* =========================
+       HERO 第一屏
+    ========================== */
+
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+
+      padding:55px 24px 65px;
+
       background:
-        radial-gradient(circle at 75% 40%, rgba(28, 235, 167, 0.16), transparent 30%),
-        linear-gradient(135deg, #031314, #062627);
+        radial-gradient(
+          circle at 77% 38%,
+          rgba(41,239,174,.16),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 15% 85%,
+          rgba(0,130,105,.12),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #021213 0%,
+          #052426 55%,
+          #03191b 100%
+        );
     }
 
-    .hero-inner {
-      width: 100%;
-      max-width: 1100px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:100%;
+      height:1px;
+
+      background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(48,237,176,.45),
+        transparent
+      );
     }
 
-    .logo-title {
-      color: #35efb3;
-      font-size: 15px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 22px;
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+
+      width:100%;
+      max-width:1180px;
+
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:70px;
+      align-items:center;
     }
 
-    h1 {
-      font-size: 64px;
-      line-height: 1.12;
-      margin-bottom: 24px;
+
+    /* LOGO */
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+
+      margin-bottom:42px;
     }
 
-    h1 span {
-      color: #35efb3;
+
+    .brand-logo{
+      width:64px;
+      height:64px;
+
+      border-radius:17px;
+      overflow:hidden;
+
+      flex:none;
+
+      box-shadow:
+        0 0 0 1px rgba(53,239,179,.35),
+        0 0 28px rgba(53,239,179,.13);
     }
 
-    .description {
-      color: #91adb0;
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 34px;
+
+    .brand-logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+
+    .brand-name{
+      font-size:25px;
+      font-weight:950;
+      letter-spacing:1px;
     }
 
-    .button {
-      padding: 17px 32px;
-      border-radius: 12px;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 16px;
+
+    .brand-en{
+      margin-top:5px;
+
+      color:#35efb3;
+
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:2.4px;
     }
 
-    .primary {
-      background: #35efb3;
-      color: #032019;
+
+    /* Hero 文字 */
+
+    .eyebrow{
+      color:#35efb3;
+
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:3px;
+
+      margin-bottom:14px;
     }
 
-    .secondary {
-      border: 1px solid #4d696b;
-      color: white;
+
+    h1{
+      font-size:68px;
+      line-height:1.08;
+      letter-spacing:-2px;
+
+      font-weight:950;
+
+      margin-bottom:24px;
     }
 
-    .preview {
-      min-height: 500px;
-      border-radius: 30px;
-      border: 1px solid rgba(53,239,179,.3);
-      background: rgba(5, 35, 37, .7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #35efb3;
-      padding: 40px;
+
+    h1 span{
+      color:#35efb3;
     }
 
-    @media (max-width: 800px) {
-      .hero {
-        padding: 50px 20px;
+
+    .hero-desc{
+      max-width:560px;
+
+      color:#9ab8ba;
+
+      font-size:18px;
+      line-height:1.85;
+
+      margin-bottom:34px;
+    }
+
+
+    .hero-desc strong{
+      color:#dffaf1;
+      font-weight:700;
+    }
+
+
+    /* 按鈕 */
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+
+    .btn{
+      height:58px;
+
+      min-width:190px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:0 28px;
+
+      border-radius:15px;
+
+      font-size:16px;
+      font-weight:900;
+
+      transition:.2s ease;
+    }
+
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+
+    .btn-primary{
+      background:
+        linear-gradient(
+          135deg,
+          #25e4a6,
+          #59f3c2
+        );
+
+      color:#032119;
+
+      box-shadow:
+        0 10px 35px rgba(37,228,166,.18);
+    }
+
+
+    .btn-secondary{
+      color:#fff;
+
+      border:1px solid rgba(255,255,255,.2);
+
+      background:rgba(255,255,255,.035);
+    }
+
+
+    /* 右側軟體畫面 */
+
+    .app-preview{
+      position:relative;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+
+    .app-preview::before{
+      content:"";
+
+      position:absolute;
+
+      width:420px;
+      height:420px;
+
+      border-radius:50%;
+
+      background:
+        rgba(42,237,173,.11);
+
+      filter:blur(70px);
+    }
+
+
+    .phone-frame{
+      position:relative;
+      z-index:2;
+
+      width:365px;
+      max-width:90%;
+
+      border-radius:30px;
+      overflow:hidden;
+
+      border:
+        1px solid rgba(73,241,187,.28);
+
+      background:#071e20;
+
+      box-shadow:
+        0 35px 80px rgba(0,0,0,.46),
+        0 0 50px rgba(38,238,170,.07);
+    }
+
+
+    .phone-frame img{
+      width:100%;
+      height:auto;
+    }
+
+
+    .floating-badge{
+      position:absolute;
+      z-index:3;
+
+      right:0;
+      bottom:55px;
+
+      padding:12px 18px;
+
+      border-radius:14px;
+
+      background:rgba(7,34,32,.93);
+
+      border:
+        1px solid rgba(53,239,179,.4);
+
+      color:#35efb3;
+
+      font-size:13px;
+      font-weight:800;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.3);
+    }
+
+
+
+    /* =========================
+       手機版
+    ========================== */
+
+    @media(max-width:850px){
+
+      .hero{
+        min-height:auto;
+
+        padding:
+          30px
+          20px
+          60px;
       }
 
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
+
+      .hero-inner{
+        grid-template-columns:1fr;
+
+        gap:46px;
       }
 
-      h1 {
-        font-size: 44px;
+
+      .brand{
+        margin-bottom:32px;
       }
 
-      .preview {
-        min-height: 350px;
+
+      .brand-logo{
+        width:52px;
+        height:52px;
+
+        border-radius:14px;
       }
+
+
+      .brand-name{
+        font-size:21px;
+      }
+
+
+      .brand-en{
+        font-size:9px;
+      }
+
+
+      .eyebrow{
+        font-size:10px;
+        letter-spacing:2.2px;
+      }
+
+
+      h1{
+        font-size:45px;
+        line-height:1.1;
+        letter-spacing:-1px;
+
+        margin-bottom:21px;
+      }
+
+
+      .hero-desc{
+        font-size:16px;
+        line-height:1.8;
+        margin-bottom:27px;
+      }
+
+
+      .hero-buttons{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+      }
+
+
+      .btn{
+        min-width:0;
+        height:56px;
+        padding:0 10px;
+      }
+
+
+      .phone-frame{
+        width:320px;
+      }
+
+
+      .floating-badge{
+        right:10px;
+        bottom:35px;
+
+        font-size:11px;
+        padding:10px 13px;
+      }
+
     }
+
+
+
+    @media(max-width:480px){
+
+      h1{
+        font-size:40px;
+      }
+
+
+      .hero-buttons{
+        grid-template-columns:1fr;
+      }
+
+
+      .btn{
+        width:100%;
+      }
+
+
+      .phone-frame{
+        width:100%;
+        max-width:360px;
+      }
+
+
+      .floating-badge{
+        display:none;
+      }
+
+    }
+
   </style>
 </head>
 
+
+
 <body>
 
-  <section class="hero">
 
-    <div class="hero-inner">
+<section class="hero">
 
-      <div>
+  <div class="hero-inner">
 
-        <div class="logo-title">
-          ⚽ 哈寶足球 AI
+
+    <!-- 左側 -->
+    <div class="hero-copy">
+
+
+      <div class="brand">
+
+        <div class="brand-logo">
+          <img
+            src="habao-logo.png"
+            alt="哈寶足球AI LOGO"
+          >
         </div>
 
-        <h1>
-          每天賽事<br>
-          不用自己<span>查半天</span>
-        </h1>
 
-        <p class="description">
-          AI 整合賽事數據<br>
-          快速分析獨贏・大小分・BTTS・比分
-        </p>
+        <div>
 
-        <div class="buttons">
+          <div class="brand-name">
+            哈寶足球 AI
+          </div>
 
-          <a href="#" class="button primary">
-            立即使用 →
-          </a>
-
-          <a href="#" class="button secondary">
-            免費領取帳號
-          </a>
+          <div class="brand-en">
+            HABAO FOOTBALL AI
+          </div>
 
         </div>
 
       </div>
 
-      <div class="preview">
-        這裡等等放<br>
-        哈寶足球 AI 實際介面
+
+
+      <div class="eyebrow">
+        FOOTBALL AI ANALYSIS
       </div>
+
+
+
+      <h1>
+        每天賽事<br>
+        不用自己<span>查半天</span>
+      </h1>
+
+
+
+      <div class="hero-desc">
+
+        AI 整合賽事數據，
+        快速分析
+
+        <strong>
+          獨贏・大小分・BTTS・比分
+        </strong>
+
+        ，把複雜資料整理成更容易閱讀的分析結果。
+
+      </div>
+
+
+
+      <div class="hero-buttons">
+
+        <a
+          href="#"
+          class="btn btn-primary"
+        >
+          立即使用 →
+        </a>
+
+
+        <a
+          href="#"
+          class="btn btn-secondary"
+        >
+          免費領取帳號
+        </a>
+
+      </div>
+
 
     </div>
 
-  </section>
+
+
+
+    <!-- 右側 -->
+    <div class="app-preview">
+
+
+      <div class="phone-frame">
+
+        <img
+          src="match-list.png"
+          alt="哈寶足球AI賽事介面"
+        >
+
+      </div>
+
+
+      <div class="floating-badge">
+        ⚽ 明日賽事一鍵掌握
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
 
 </body>
 </html>
