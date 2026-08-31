@@ -342,7 +342,168 @@
         0 12px 30px rgba(0,0,0,.3);
     }
 
+    /* =========================
+   AI 對比區
+========================== */
 
+.compare-section{
+  background:#f5f7f7;
+  color:#102126;
+  padding:85px 22px;
+}
+
+.compare-inner{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+}
+
+.compare-title{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 45px;
+}
+
+.compare-small{
+  color:#0dbb82;
+  font-size:11px;
+  letter-spacing:3px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+.compare-title h2{
+  font-size:38px;
+  font-weight:950;
+  margin-bottom:14px;
+}
+
+.compare-title p{
+  color:#728287;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.compare-box{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 80px 1fr;
+  gap:18px;
+  align-items:center;
+}
+
+.compare-card{
+  border-radius:22px;
+  padding:30px;
+  min-height:340px;
+}
+
+.compare-card.normal{
+  background:white;
+  border:1px solid #e3e7e8;
+  box-shadow:0 15px 40px rgba(0,0,0,.05);
+}
+
+.compare-card.habao{
+  color:white;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(48,239,176,.15),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      #031718,
+      #07302b
+    );
+  border:1px solid rgba(47,235,174,.5);
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.compare-card-title{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:30px;
+}
+
+.compare-card-title img{
+  width:50px;
+  height:50px;
+  border-radius:12px;
+}
+
+.compare-card-icon{
+  width:50px;
+  height:50px;
+  border-radius:12px;
+  background:#eef2f3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+}
+
+.compare-card-title h3{
+  font-size:23px;
+  font-weight:950;
+  margin-bottom:5px;
+}
+
+.compare-card-title span{
+  font-size:13px;
+  opacity:.6;
+}
+
+.compare-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.compare-item{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.compare-item b{
+  width:24px;
+  height:24px;
+  flex:none;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.compare-item.bad b{
+  background:#a7b0b4;
+  color:white;
+}
+
+.compare-item.good b{
+  background:#31e4a6;
+  color:#042219;
+}
+
+.vs-circle{
+  width:58px;
+  height:58px;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#35efb3;
+  color:#032019;
+  font-weight:950;
+  font-size:18px;
+  box-shadow:0 10px 30px rgba(53,239,179,.25);
+}
 
     /* =========================
        手機版
@@ -439,6 +600,25 @@
         padding:10px 13px;
       }
 
+    .compare-grid{
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.compare-card{
+  padding:22px 18px;
+}
+
+.compare-card-title{
+  min-height:auto;
+}
+
+.vs-circle{
+  width:48px;
+  height:48px;
+  font-size:15px;
+}
+      
     }
 
 
@@ -594,6 +774,126 @@
 
 </section>
 
+<section class="compare-section">
+
+  <div class="compare-inner">
+
+    <div class="compare-title">
+
+      <div class="compare-small">
+        WHY HABAO AI
+      </div>
+
+      <h2>
+        為什麼選擇哈寶足球 AI？
+      </h2>
+
+      <p>
+        同樣都是 AI，差別在於你要自己查資料，
+        還是直接得到整理好的足球分析。
+      </p>
+
+    </div>
+
+
+    <div class="compare-box">
+
+
+      <!-- 自己用 AI -->
+      <div class="compare-card normal">
+
+        <div class="compare-card-title">
+
+          <div class="compare-card-icon">
+            🤖
+          </div>
+
+          <div>
+            <h3>自己用 AI 查</h3>
+            <span>看似方便，但其實有很多限制</span>
+          </div>
+
+        </div>
+
+
+        <div class="compare-list">
+
+          <div class="compare-item bad">
+            <b>×</b>
+            <span>需要一場一場輸入，費時又麻煩</span>
+          </div>
+
+          <div class="compare-item bad">
+            <b>×</b>
+            <span>資料零散，容易遺漏重要資訊</span>
+          </div>
+
+          <div class="compare-item bad">
+            <b>×</b>
+            <span>缺乏專業足球數據與趨勢分析</span>
+          </div>
+
+          <div class="compare-item bad">
+            <b>×</b>
+            <span>只給結果，沒有深度解讀</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="vs-circle">
+        VS
+      </div>
+
+
+      <!-- 哈寶 -->
+      <div class="compare-card habao">
+
+        <div class="compare-card-title">
+
+          <img src="habao-logo.png" alt="哈寶足球AI">
+
+          <div>
+            <h3>哈寶足球 AI</h3>
+            <span>專為足球打造的 AI 分析系統</span>
+          </div>
+
+        </div>
+
+
+        <div class="compare-list">
+
+          <div class="compare-item good">
+            <b>✓</b>
+            <span>自動抓取明日賽事，一鍵掌握</span>
+          </div>
+
+          <div class="compare-item good">
+            <b>✓</b>
+            <span>整合多項數據，全面分析</span>
+          </div>
+
+          <div class="compare-item good">
+            <b>✓</b>
+            <span>專業 AI 模型＋真人深度解析</span>
+          </div>
+
+          <div class="compare-item good">
+            <b>✓</b>
+            <span>一目了然的分析結果與建議</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>  
 
 </body>
 </html>
