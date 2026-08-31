@@ -898,6 +898,138 @@
   border-radius:22px;
 }
 }
+
+/* =========================
+   最終 CTA
+========================== */
+
+.final-cta{
+  padding:70px 20px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(53,239,179,.13),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #052426 0%,
+      #021516 100%
+    );
+
+  text-align:center;
+
+  border-top:
+    1px solid rgba(53,239,179,.16);
+}
+
+.final-cta-inner{
+  width:100%;
+  max-width:720px;
+  margin:auto;
+}
+
+.final-cta-logo{
+  width:72px;
+  height:72px;
+
+  margin:0 auto 22px;
+
+  border-radius:18px;
+  overflow:hidden;
+
+  box-shadow:
+    0 0 0 1px rgba(53,239,179,.35),
+    0 0 32px rgba(53,239,179,.15);
+}
+
+.final-cta-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.final-cta h2{
+  color:#fff;
+  font-size:36px;
+  line-height:1.35;
+  font-weight:950;
+  margin-bottom:15px;
+}
+
+.final-cta p{
+  color:#91adaf;
+  font-size:16px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.final-cta-btn{
+  width:100%;
+  max-width:420px;
+  height:60px;
+
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #23dfa2,
+      #5bf2c3
+    );
+
+  color:#032019;
+
+  font-size:17px;
+  font-weight:950;
+
+  box-shadow:
+    0 14px 35px rgba(35,223,162,.20);
+
+  transition:.2s ease;
+}
+
+.final-cta-btn:hover{
+  transform:translateY(-2px);
+}
+
+
+/* CTA 手機版 */
+@media(max-width:850px){
+
+  .final-cta{
+    padding:58px 20px 65px;
+  }
+
+  .final-cta-logo{
+    width:60px;
+    height:60px;
+    border-radius:15px;
+    margin-bottom:18px;
+  }
+
+  .final-cta h2{
+    font-size:28px;
+  }
+
+  .final-cta p{
+    font-size:14px;
+    margin-bottom:25px;
+  }
+
+  .final-cta-btn{
+    max-width:100%;
+    height:58px;
+    font-size:16px;
+  }
+}
     
   </style>
 </head>
@@ -1209,6 +1341,31 @@
     <div class="result-image-wrap">
       <img src="analysis-result.png" alt="哈寶足球AI真實賽事分析結果">
     </div>
+
+  </div>
+
+</section>
+<!-- 最終 CTA -->
+<section class="final-cta">
+
+  <div class="final-cta-inner">
+
+    <div class="final-cta-logo">
+      <img src="habao-logo.png" alt="哈寶足球AI">
+    </div>
+
+    <h2>
+      下一場，交給哈寶 AI 幫你分析
+    </h2>
+
+    <p>
+      明日賽事一鍵掌握，<br>
+      多項數據一次整理。
+    </p>
+
+    <a href="#" class="final-cta-btn">
+      立即免費使用 →
+    </a>
 
   </div>
 
