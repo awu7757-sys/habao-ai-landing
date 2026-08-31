@@ -505,6 +505,111 @@
   box-shadow:0 10px 30px rgba(53,239,179,.25);
 }
 
+/* =========================
+   四大分析項目
+========================== */
+
+.analysis-section{
+  background:#ffffff;
+  color:#102126;
+  padding:80px 22px;
+}
+
+.analysis-inner{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+}
+
+.analysis-title{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 42px;
+}
+
+.analysis-small{
+  color:#0dbb82;
+  font-size:11px;
+  letter-spacing:3px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+.analysis-title h2{
+  font-size:38px;
+  font-weight:950;
+  margin-bottom:14px;
+}
+
+.analysis-title p{
+  color:#738287;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.analysis-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.analysis-card{
+  min-height:210px;
+  padding:28px 20px;
+
+  border-radius:20px;
+
+  background:#f8faf9;
+
+  border:1px solid #e2e8e6;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  transition:.2s ease;
+}
+
+.analysis-card:hover{
+  transform:translateY(-4px);
+  border-color:#35efb3;
+}
+
+.analysis-icon{
+  width:64px;
+  height:64px;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:18px;
+
+  background:#e9fff7;
+
+  color:#0b8f67;
+
+  font-size:28px;
+  font-weight:950;
+}
+
+.analysis-card h3{
+  font-size:22px;
+  font-weight:950;
+  margin-bottom:9px;
+}
+
+.analysis-card p{
+  color:#748387;
+  font-size:14px;
+  line-height:1.6;
+}
+    
     /* =========================
        手機版
     ========================== */
@@ -617,6 +722,47 @@
   width:48px;
   height:48px;
   font-size:15px;
+}
+
+.analysis-section{
+  padding:60px 20px;
+}
+
+.analysis-title{
+  margin-bottom:32px;
+}
+
+.analysis-title h2{
+  font-size:30px;
+}
+
+.analysis-title p{
+  font-size:14px;
+}
+
+.analysis-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.analysis-card{
+  min-height:170px;
+  padding:20px 12px;
+}
+
+.analysis-icon{
+  width:52px;
+  height:52px;
+  font-size:23px;
+  margin-bottom:13px;
+}
+
+.analysis-card h3{
+  font-size:18px;
+}
+
+.analysis-card p{
+  font-size:12px;
 }
       
     }
@@ -895,5 +1041,53 @@
 
 </section>  
 
+<!-- 四大分析項目 -->
+<section class="analysis-section">
+
+  <div class="analysis-inner">
+
+    <div class="analysis-title">
+      <div class="analysis-small">AI ANALYSIS</div>
+
+      <h2>四大核心分析</h2>
+
+      <p>
+        從賽事數據到 AI 綜合判斷，<br>
+        一次掌握四大分析方向。
+      </p>
+    </div>
+
+    <div class="analysis-grid">
+
+      <div class="analysis-card">
+        <div class="analysis-icon">🏆</div>
+        <h3>獨贏</h3>
+        <p>主勝・和局・客勝</p>
+      </div>
+
+      <div class="analysis-card">
+        <div class="analysis-icon">⚽</div>
+        <h3>大小分</h3>
+        <p>進球數據與大小球趨勢</p>
+      </div>
+
+      <div class="analysis-card">
+        <div class="analysis-icon">✓</div>
+        <h3>BTTS</h3>
+        <p>雙方是否都有進球</p>
+      </div>
+
+      <div class="analysis-card">
+        <div class="analysis-icon">2:1</div>
+        <h3>比分</h3>
+        <p>AI 綜合數據比分分析</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  
 </body>
 </html>
