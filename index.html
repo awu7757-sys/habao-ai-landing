@@ -798,6 +798,106 @@
 
     }
 
+ /* =========================
+   真實 AI 分析結果
+========================== */
+
+.result-showcase{
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(41,239,174,.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #031718 0%,
+      #062628 100%
+    );
+
+  padding:80px 22px;
+}
+
+.result-showcase-inner{
+  width:100%;
+  max-width:1000px;
+  margin:auto;
+}
+
+.result-showcase-title{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 40px;
+}
+
+.result-showcase-small{
+  color:#35efb3;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+.result-showcase-title h2{
+  color:#ffffff;
+  font-size:38px;
+  font-weight:950;
+  margin-bottom:14px;
+}
+
+.result-showcase-title p{
+  color:#8faeb0;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.result-image-wrap{
+  width:100%;
+  max-width:520px;
+  margin:auto;
+
+  border-radius:28px;
+  overflow:hidden;
+
+  border:1px solid rgba(53,239,179,.28);
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.35),
+    0 0 40px rgba(53,239,179,.06);
+}
+
+.result-image-wrap img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+
+/* 手機 */
+@media(max-width:850px){
+
+  .result-showcase{
+    padding:60px 20px;
+  }
+
+  .result-showcase-title{
+    margin-bottom:30px;
+  }
+
+  .result-showcase-title h2{
+    font-size:30px;
+  }
+
+  .result-showcase-title p{
+    font-size:14px;
+  }
+
+  .result-image-wrap{
+    max-width:420px;
+    border-radius:22px;
+  }
+}
+    
   </style>
 </head>
 
@@ -1083,6 +1183,30 @@
         <p>AI 綜合數據比分分析</p>
       </div>
 
+    </div>
+
+  </div>
+
+</section>
+
+<!-- 真實 AI 分析結果 -->
+<section class="result-showcase">
+
+  <div class="result-showcase-inner">
+
+    <div class="result-showcase-title">
+      <div class="result-showcase-small">REAL AI ANALYSIS</div>
+
+      <h2>真實賽事分析結果</h2>
+
+      <p>
+        從賽事資料到 AI 深度判斷，<br>
+        分析結果清楚呈現。
+      </p>
+    </div>
+
+    <div class="result-image-wrap">
+      <img src="analysis-result.png" alt="哈寶足球AI真實賽事分析結果">
     </div>
 
   </div>
